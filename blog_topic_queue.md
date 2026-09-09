@@ -36,7 +36,7 @@ Category IDs: Web development 15 · AI 30 · Graphic design 18 · E-commerce 10 
 | 2026-09-17 | Colour and contrast: accessibility rules that also sell more | Graphic design 18 |
 | 2026-09-18 | Amazon SEO: how listings actually get ranked and found | Amazon 25 |
 | 2026-09-19 | Turning Instagram traffic into actual bookings | E-commerce 10 |
-| 2026-09-20 | Booth design and print collateral that survives a trade show floor | Event 24 |
+| 2026-09-20 | Planning a trade show trip on a small budget: flights, days, what to skip | Event 24 |
 | 2026-09-21 | WordPress maintenance: what actually breaks when nobody is watching | Web development 15 |
 | 2026-09-22 | Using AI to write for your business without sounding like everyone else | AI 30 |
 | 2026-09-23 | drupa, PRINT and the 2026-2028 print summit calendar: planning travel years ahead | Summit 13 |
@@ -62,7 +62,7 @@ Category IDs: Web development 15 · AI 30 · Graphic design 18 · E-commerce 10 
 | 2026-10-03 | Writing product descriptions with AI without sounding generic | AI 30 |
 | 2026-10-04 | Email signatures that don't look broken in Outlook | Branding 7 |
 | 2026-10-05 | Amazon PPC basics: your first campaigns without burning budget | Amazon 25 |
-| 2026-10-06 | Sponsoring or exhibiting at a local Aruba event: what it really costs and returns | Event 24 |
+| 2026-10-06 | Web Summit Lisbon vs Web Summit Rio: which one fits a small studio | Summit 13 |
 | 2026-10-07 | Product photography on a phone, done properly | Graphic design 18 |
 | 2026-10-08 | Shipping and delivery pages that stop customers abandoning | E-commerce 10 |
 | 2026-10-09 | Website backups: what "we have backups" should actually mean | Web development 15 |
@@ -71,14 +71,12 @@ Category IDs: Web development 15 · AI 30 · Graphic design 18 · E-commerce 10 
 | 2026-10-12 | Meeting suppliers at an expo: questions that get real answers | Event 24 |
 | 2026-10-13 | Adobe MAX and the creative conference calendar: what to watch | Summit 13 |
 
-Balance per 20-day block: Amazon 4 · Event 3 · AI 3 · Web development 3 · Summit 2 · Graphic design 2 · E-commerce 2 · Branding 1.
+Balance per 20-day block: Amazon 4 · Event 2 · AI 3 · Web development 3 · Summit 3 · Graphic design 2 · E-commerce 2 · Branding 1.
 
 ## Reserve topics
 Events / summits — always keep several ready:
 - Web and design conferences worth streaming when you cannot travel (Summit)
 - CES, MWC and the big consumer-tech shows: what actually matters to a design studio (Summit)
-- Web Summit Lisbon vs Web Summit Rio: which one fits a small studio (Summit)
-- Planning a trade show trip on a small budget: flights, days, what to skip (Event)
 Other:
 - Amazon brand registry and why it matters before you scale (Amazon)
 - What belongs on a one-page site when you're just starting out (Branding)
