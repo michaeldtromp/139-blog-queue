@@ -2,6 +2,9 @@
 
 Automated daily blog post generation and publishing for 139aruba.com.
 
+> **Status (2026-09-09):** The daily blog is now handled by Claude's scheduled task (6:00 AM Aruba time). This repository serves as a backup for the queue and style guide only. The GitHub Actions workflow has been removed; `blog_automation.py` is kept as a reference and does not run automatically.
+
+
 ---
 
 ## How It Works

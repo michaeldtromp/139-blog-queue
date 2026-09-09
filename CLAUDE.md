@@ -14,4 +14,4 @@ This repository is the source of truth for the daily post queue. Every run, whet
 
 Event and summit posts: the reader is a visitor, never an exhibitor, sponsor or stand designer. Verify every date and link on the organiser's site at write time.
 
-The unattended path is `.github/workflows/daily_blog.yml` running `blog_automation.py` at 07:00 Aruba (11:00 UTC). It publishes through the WordPress REST API with the `WP_APP_PASSWORD` secret and moves the row to `## Published`. If a desktop session publishes a post by hand, mark the row PUBLISHED (or move it) and push, so the Action does not repeat it. `python blog_automation.py --check` shows what the next run would pick up.
+The unattended path is Claude's scheduled task (06:00 Aruba). The GitHub Actions workflow was removed on 2026-09-09 to avoid double publishing; `blog_automation.py` stays in the repo as a reference and can be run by hand with `--dry-run` or `--check`. Whoever publishes a post must mark its row PUBLISHED in `blog_topic_queue.md` and push, so the next run does not repeat it.
