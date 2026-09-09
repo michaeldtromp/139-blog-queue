@@ -14,4 +14,4 @@ This repository is the source of truth for the daily post queue. Every run, whet
 
 Event and summit posts: the reader is a visitor, never an exhibitor, sponsor or stand designer. Verify every date and link on the organiser's site at write time.
 
-Note: `blog_automation.py` is empty and the workflow sits in `github/` rather than `.github/`, so the GitHub Action does not run. Until that is rebuilt, the desktop Claude run is the publishing path.
+The unattended path is `.github/workflows/daily_blog.yml` running `blog_automation.py` at 07:00 Aruba (11:00 UTC). It publishes through the WordPress REST API with the `WP_APP_PASSWORD` secret and moves the row to `## Published`. If a desktop session publishes a post by hand, mark the row PUBLISHED (or move it) and push, so the Action does not repeat it. `python blog_automation.py --check` shows what the next run would pick up.

@@ -9,8 +9,8 @@ Automated daily blog post generation and publishing for 139aruba.com.
 - **Daily Trigger:** GitHub Action runs at 7:00 AM Aruba time (UTC-4)
 - **Queue-Based:** Reads the next topic from `blog_topic_queue.md`
 - **AI-Powered:** Generates content via Claude API (`claude-sonnet-5`)
-- **WordPress Publish:** Creates and schedules the post via REST API
-- **Self-Updating:** Removes published topic from the queue and pushes the updated file
+- **WordPress Publish:** Builds the Elementor layout and publishes via the WordPress REST API (Application Password)
+- **Self-Updating:** Moves the published topic to the `## Published` section of the queue and pushes the file
 
 ---
 
@@ -24,7 +24,10 @@ Automated daily blog post generation and publishing for 139aruba.com.
 
 | File | Purpose |
 |------|---------|
-| `blog_topic_queue.md` | List of topics in order. Format: `YYYY-MM-DD Title — Category ID` |
+| `blog_topic_queue.md` | Dated topic table. Rows marked **PUBLISHED** are skipped |
+| `blog_139aruba.md` | House style, layout recipe, image and SEO rules |
+| `aruba_local_context.md` | Local facts every post must respect |
+| `elementor_template.json` | Elementor layout cloned from an approved post, with placeholders |
 | `blog_automation.py` | Python script that handles the entire workflow |
 | `.github/workflows/daily_blog.yml` | Scheduled GitHub Action (7 AM Aruba time) |
 
@@ -37,7 +40,8 @@ Configure these in **Settings → Secrets and variables → Actions**:
 | Secret Name | Purpose |
 |-------------|---------|
 | `ANTHROPIC_API_KEY` | Claude API key for content generation |
-| `WP_APP_PASSWORD` | WordPress application password for authentication |
+| `WP_APP_PASSWORD` | WordPress application password for user `Mic139` |
+| `PEXELS_API_KEY` | Optional. Enables fresh photography; without it the newest featured image in the category is reused |
 
 ---
 
@@ -56,6 +60,15 @@ Configure these in **Settings → Secrets and variables → Actions**:
 
 ---
 
+## Local test
+
+```bash
+pip install anthropic requests
+python blog_automation.py --check                  # parse the queue only
+python blog_automation.py --dry-run                # generate, build, publish nothing
+BLOG_POST_STATUS=draft python blog_automation.py   # publish as a draft for review
+```
+
 ## Manual Run
 
 To trigger the workflow manually:
@@ -69,7 +82,8 @@ To trigger the workflow manually:
 ## Notes
 
 - WordPress user: `Mic139` (Application Password required)
-- API model: `claude-sonnet-5`
+- API model: `claude-sonnet-5` (override with `CLAUDE_MODEL`)
+- The post is published immediately at run time; WP-Cron is disabled on the site, so scheduled posts would never go live
 - Timezone: Aruba (AST / UTC-4)
 
 ---
