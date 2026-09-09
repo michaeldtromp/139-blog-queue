@@ -86,7 +86,7 @@ To trigger the workflow manually:
 
 - WordPress user: `Mic139` (Application Password required)
 - API model: `claude-sonnet-5` (override with `CLAUDE_MODEL`)
-- The post is published immediately at run time; WP-Cron is disabled on the site, so scheduled posts would never go live
+- The post is published immediately at run time. Note: WP-Cron was stalled on the site Aug 10-Sep 4, 2026, which is where this assumption came from; a cPanel cron job fixed it on Sep 4 and it has been publishing scheduled (`future`-status) posts correctly since — see the Claude scheduled task notes before assuming it's broken again
 - Timezone: Aruba (AST / UTC-4)
 
 ---
